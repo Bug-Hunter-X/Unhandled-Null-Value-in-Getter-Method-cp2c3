@@ -1,0 +1,3 @@
+This repository demonstrates a common Dart bug involving unhandled null values when accessing nullable properties through getter methods. The `bug.dart` file showcases the faulty code, while `bugSolution.dart` provides a corrected version that prevents potential exceptions.
+
+The issue lies in the getter for `myInt` in the `MyClass` class. While the null-aware operator (`??`) handles the case of a null value, if the getter is called before any value is assigned to `_myNullableInt`, it still throws an error. This is resolved by using a proper null check or providing a default value during the instantiation of the object.
